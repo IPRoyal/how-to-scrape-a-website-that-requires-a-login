@@ -1,17 +1,15 @@
-# How to Scrape a Website That Requires a Login: Python Tutorial
-
-**Author:** Eugenijus Denisov  
-**Last updated:** August 29, 2025 • ~7 min read
-
-This README condenses the article into a GitHub-friendly format. It shows how to log in with Python Requests, maintain a session, and scrape data from a protected page.  
+# How to Scrape a Website That Requires a Login
 
 ---
 
-## Why login scraping?
-Some sites hide data behind authentication (forums, ecommerce, dashboards). With Requests, you can:  
-- Create a session to store cookies/headers  
-- Send a POST request with credentials  
-- Reuse the session for subsequent GET requests  
+## Why scrape pages that need authentication?
+Some data (forums, accounts, dashboards) is only visible after logging in.  
+With Python Requests you can:  
+- Start a session to keep cookies and headers  
+- Log in with a POST request using your credentials  
+- Reuse the session to access protected pages  
+
+This allows you to collect information that isn’t available to anonymous visitors while keeping the login state active across requests.
 
 ⚠️ Always check Terms of Service before scraping. If ToS forbid scraping, you must not proceed.
 
